@@ -1,0 +1,70 @@
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#drum-machine {
+  width: 600px;
+  height: 400px;
+  background-color: lightgrey;
+  box-shadow: 2px 2px 6px #656565;
+  border-radius: 15px;
+}
+
+button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  font-size: 40px;
+  width: 90px;
+  height: 90px;
+  background-color: lightgray;
+  border: 1px solid gray;
+  box-shadow: 2px 2px 6px #656565;
+  border-radius: 15px;
+}
+
+button:hover {
+  border: 5px solid darkgrey;
+}
+
+button:active {
+  color: rgb(231, 255, 47);
+  width: 87px;
+  height: 87px;
+  background-color: greenyellow;
+  border: 1px solid darkgrey;
+  box-shadow: 1px 1px 2px #787878;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+.top, .middle, .bottom {
+  height: 120px;
+  padding: 15px;
+}
+
+.dColumn {
+  padding-left: 0%;
+  display: flex;
+  align-items: center;
+}
+
+#display {
+  display: flex;
+  margin-left: -15px;
+  width: 100vw;
+  height: 80px;
+  border: 1px solid rgb(111, 111, 111);
+  background-color: greenyellow;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+#display h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #505050
+}
