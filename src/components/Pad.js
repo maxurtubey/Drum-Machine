@@ -1,6 +1,15 @@
 import React from "react";
+import Audio from "./Audio";
 
-export default function Pad({ pressKey, setear, ident }) {
+export default function Pad({ pressKey, setear, ident, lnk }) {
+
+  function changeClass(id) {
+    let supuesto = document.getElementById(id);
+    supuesto.className = "activvo";
+    setTimeout(function () {
+      supuesto.className = "padbtn";
+    }, 100);
+  }
 
   function fromKeyboard(ident) {
     setear(ident);
@@ -11,47 +20,60 @@ export default function Pad({ pressKey, setear, ident }) {
 
   document.onkeyup = function (e) {
     var key = e.key;
-    if (key === 'q') {
+    if (key === 'q' || key === 'Q') {
       fromKeyboard('Chord-1');
+      changeClass('Q');
     }
-    if (key === 'w') {
+    if (key === 'w' || key === 'W') {
       fromKeyboard('Chord-2');
+      changeClass('W');
     }
-    if (key === 'e') {
+    if (key === 'e' || key === 'E') {
       fromKeyboard('Chord-3');
+      changeClass('E');
     }
-    if (key === 'a') {
+    if (key === 'a' || key === 'A') {
       fromKeyboard('Shaker');
+      changeClass('A');
     }
-    if (key === 's') {
+    if (key === 's' || key === 'S') {
       fromKeyboard('Open-HH');
+      changeClass('S');
     }
-    if (key === 'd') {
+    if (key === 'd' || key === 'D') {
       fromKeyboard('Closed-HH');
+      changeClass('D');
     }
-    if (key === 'z') {
+    if (key === 'z' || key === 'Z') {
       fromKeyboard('Punchy-Kick');
+      changeClass('Z');
     }
-    if (key === 'x') {
+    if (key === 'x' || key === 'X') {
       fromKeyboard('Side-Stick');
+      changeClass('X');
     }
-    if (key === 'c') {
+    if (key === 'c' || key === 'C') {
       fromKeyboard('Snare');
+      changeClass('C');
     }
   }
 
   function playSound() {
     const sound = document.getElementById(ident);
     sound.currentTime = 0;
+    // console.log(sound);
     sound.play();
   }
 
-  function clickDeBtn(ident) {
+  function clickDeBtn() {
     setear(ident);
     playSound()
   }
 
   return (
-    <button className='padbtn' onClick={() => clickDeBtn(ident)}>{pressKey}</button>
+    <>
+      <button id={pressKey} className='padbtn' onClick={() => clickDeBtn()}>{pressKey}</button>
+      <Audio ident={ident} lnk={lnk}></Audio>
+    </>
   )
 }

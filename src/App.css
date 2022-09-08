@@ -37,6 +37,15 @@ button:active {
   box-shadow: 1px 1px 2px #787878;
 }
 
+.activvo {
+  color: rgb(231, 255, 47);
+  width: 87px;
+  height: 87px;
+  background-color: greenyellow;
+  border: 1px solid darkgrey;
+  box-shadow: 1px 1px 2px #787878;
+}
+
 .container {
   padding-top: 20px;
 }
