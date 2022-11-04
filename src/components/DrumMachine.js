@@ -22,7 +22,7 @@ export default function DrumMachine() {
     <div className="section">
       <div id="drum-machine" className="container">
         <div className="row">
-          <div className="col-8 pad">
+          <div className="col-7 pad">
             <div className="row top">
             <div className="col">
                 <Pad setear={setbank} pressKey={"Q"} ident={songBank.chord1[0]} lnk={songBank.chord1[1]}/>
@@ -57,8 +57,15 @@ export default function DrumMachine() {
               </div>
             </div>
           </div>
-          <div className="col-4 dColumn">
-            <Display displayText={bank} />
+          <div className="col-5 dColumn">
+            <div className="row">
+              <div className="col">
+                <Display displayText={bank} />
+              </div>
+              <div className="col">
+                <h5 className="title">JS-Drum Machine</h5>
+              </div>
+            </div>
           </div>
         </div>
       </div>

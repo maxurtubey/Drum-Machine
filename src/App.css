@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .section {
   height: 100vh;
   display: flex;
@@ -5,33 +10,43 @@
 }
 
 #drum-machine {
-  width: 600px;
-  height: 400px;
+  width: 550px;
+  height: 350px;
   background-color: lightgrey;
   box-shadow: 2px 2px 6px #656565;
   border-radius: 15px;
 }
 
-button {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.col {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drum-pad {
   color: #ffffff;
-  font-size: 40px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+
   width: 90px;
   height: 90px;
   background-color: lightgray;
   border: 1px solid gray;
   box-shadow: 2px 2px 6px #656565;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
-button:hover {
-  border: 5px solid darkgrey;
+.drum-pad:hover {
+  border: 2px solid rgb(231, 255, 47);
 }
 
-button:active {
+.drum-pad:active {
   color: rgb(231, 255, 47);
-  width: 87px;
-  height: 87px;
+  width: 90px;
+  height: 90px;
   background-color: greenyellow;
   border: 1px solid darkgrey;
   box-shadow: 1px 1px 2px #787878;
@@ -39,11 +54,22 @@ button:active {
 
 .activvo {
   color: rgb(231, 255, 47);
-  width: 87px;
-  height: 87px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
   background-color: greenyellow;
   border: 1px solid darkgrey;
   box-shadow: 1px 1px 2px #787878;
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: 'Audiowide', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 50px;
+  margin-top: 15px;
 }
 
 .container {
@@ -51,21 +77,22 @@ button:active {
 }
 
 .top, .middle, .bottom {
-  height: 120px;
-  padding: 15px;
+  margin-left: 10px;
+  height: 100px;
 }
 
 .dColumn {
-  padding-left: 0%;
   display: flex;
-  align-items: center;
+  margin-top: 20px;
 }
 
 #display {
   display: flex;
-  margin-left: -15px;
-  width: 100vw;
-  height: 80px;
+  align-self: flex-start;
+  margin-left: -10px;
+  margin-top: -10px;
+  width: 200px;
+  height: 85px;
   border: 1px solid rgb(111, 111, 111);
   background-color: greenyellow;
   align-items: center;
@@ -73,7 +100,18 @@ button:active {
   border-radius: 10px;
 }
 
+.title {
+  align-self: flex-end;
+  font-family: "Audiowide";
+  text-shadow: -1px -1px 0px rgb(131, 131, 131);
+  color:#bfbfbf;
+  margin-left: -10px;
+  margin-bottom: -5px;
+}
+
 #display h2 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #505050
+  font-family: 'Press Start 2P', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 17px;
+  margin-top: 10px;
+  color: #353535
 }
